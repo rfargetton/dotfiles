@@ -46,12 +46,23 @@ syntax on
 set noshowmode
 set laststatus=2
 
+" lightline
+let g:lightline = {
+  \ 'colorscheme': 'one',
+  \ 'active': {
+  \   'left': [ [ 'mode', 'paste' ],
+  \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+  \ },
+  \ 'component_function': {
+  \   'gitbranch': 'fugitive#head'
+  \ },
+  \ }
+
 " indentation with soft tabs only
 " set to 2 spaces
 set expandtab
 set shiftwidth=2
-set softtabstop=2
-
+set softtabstop=2 
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
@@ -59,6 +70,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'w0rp/ale'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'tpope/vim-fugitive'
 
 " Initialize plugin system
 call plug#end()
