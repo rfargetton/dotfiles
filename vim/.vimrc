@@ -23,6 +23,7 @@ highlight clear ALEWarningSign
 highlight clear SignColumn
 let g:ale_sign_error = "●"
 let g:ale_sign_warning = "●"
+let g:ale_completion_enabled = 1
 highlight ALEWarningSign ctermfg=yellow ctermbg=NONE
 highlight ALEErrorSign ctermfg=red ctermbg=NONE
 
