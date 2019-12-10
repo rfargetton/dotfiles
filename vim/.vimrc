@@ -10,11 +10,8 @@ set mouse=a
 " line numbers
 set number
 set numberwidth=3
-highlight LineNr ctermfg=238
-highlight clear CursorLine
 
 " cursorline
-highlight CursorLine ctermbg=238
 set cursorline
 
 " ale warnings
@@ -24,8 +21,6 @@ highlight clear SignColumn
 let g:ale_sign_error = "●"
 let g:ale_sign_warning = "●"
 let g:ale_completion_enabled = 1
-highlight ALEWarningSign ctermfg=yellow ctermbg=NONE
-highlight ALEErrorSign ctermfg=red ctermbg=NONE
 
 set ruler
 set nowrap
@@ -49,8 +44,8 @@ set laststatus=2
 
 " lightline
 let g:lightline = {
-  \ 'colorscheme': 'one',
   \ 'active': {
+  \   'colorscheme': 'nord',
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
   \ },
@@ -64,9 +59,11 @@ let g:lightline = {
 set expandtab
 set shiftwidth=2
 set softtabstop=2 
+
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
+Plug 'arcticicestudio/nord-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'w0rp/ale'
 Plug 'pangloss/vim-javascript'
@@ -74,6 +71,8 @@ Plug 'mxw/vim-jsx'
 Plug 'tpope/vim-fugitive'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
-
 " Initialize plugin system
 call plug#end()
+
+" colorscheme
+colorscheme nord
