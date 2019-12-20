@@ -44,8 +44,8 @@ set laststatus=2
 
 " lightline
 let g:lightline = {
+  \ 'colorscheme': 'nord',
   \ 'active': {
-  \   'colorscheme': 'nord',
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
   \ },
