@@ -33,6 +33,9 @@ call plug#begin('~/.vim/plugged')
  Plug 'preservim/nerdcommenter'
  Plug 'mhinz/vim-startify'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'nvim-lua/plenary.nvim'
+" Plug 'nvim-telescope/telescope.nvim'
+ Plug 'tpope/vim-fugitive'
  " Plug 'SirVer/ultisnips' "causes bug python 3
 call plug#end()
 
@@ -41,8 +44,10 @@ call plug#end()
  set termguicolors
  endif
  syntax enable
+ 
 " colorscheme evening
 colorscheme nord
+
 " open new split panes to right and below
 set splitright
 set splitbelow
@@ -58,3 +63,5 @@ vnoremap È :m '<-2<CR>gv=gv
 " open nerdtree cmd+B
 nnoremap <C-b> :NERDTreeToggle<CR>
 
+" let NERDTree show hidden files
+let NERDTreeShowHidden=1
