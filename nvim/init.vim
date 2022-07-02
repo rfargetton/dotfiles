@@ -40,10 +40,10 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 " color schemes
- if (has('termguicolors'))
- set termguicolors
- endif
- syntax enable
+if (has('termguicolors'))
+  set termguicolors
+endif
+syntax enable
  
 " colorscheme evening
 colorscheme nord
@@ -65,3 +65,14 @@ nnoremap <C-b> :NERDTreeToggle<CR>
 
 " let NERDTree show hidden files
 let NERDTreeShowHidden=1
+
+if has('gui_running')
+  " set guioptions-=T  " no toolbar
+  " colorscheme elflord
+  " set lines=60 columns=108 linespace=0
+  if has('gui_win32')
+    set guifont=CaskaydiaCove_NF:13
+  else
+    set guifont=CaskaydiaCove\ NF\ 13
+  endif
+endif
