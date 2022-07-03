@@ -1,4 +1,4 @@
-se nocompatible            " disable compatibility to old-time vi
+set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching 
 set ignorecase              " case insensitive 
 set mouse=v                 " middle-click paste with 
@@ -33,9 +33,12 @@ call plug#begin('~/.vim/plugged')
  Plug 'preservim/nerdcommenter'
  Plug 'mhinz/vim-startify'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ Plug 'tpope/vim-surround'
 " Plug 'nvim-lua/plenary.nvim'
 " Plug 'nvim-telescope/telescope.nvim'
  Plug 'tpope/vim-fugitive'
+ " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
  " Plug 'SirVer/ultisnips' "causes bug python 3
 call plug#end()
 
@@ -65,14 +68,3 @@ nnoremap <C-b> :NERDTreeToggle<CR>
 
 " let NERDTree show hidden files
 let NERDTreeShowHidden=1
-
-if has('gui_running')
-  " set guioptions-=T  " no toolbar
-  " colorscheme elflord
-  " set lines=60 columns=108 linespace=0
-  if has('gui_win32')
-    set guifont=CaskaydiaCove_NF:13
-  else
-    set guifont=CaskaydiaCove\ NF\ 13
-  endif
-endif
