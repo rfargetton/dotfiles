@@ -1,0 +1,10 @@
+# Dev fucntion : shortcut for ssks yarn etc.
+dev() {
+    if [ -z "$1" ]
+    then
+        ssks yarn dev
+    else
+        ssks yarn workspace "$1" dev
+    fi
+}
+
