@@ -1,4 +1,4 @@
-# Watch fucntion : shortcut for ssks yarn etc.
+# Watch function : shortcut for ssks yarn etc.
 watch() {
   if [ -z "$1" ]
   then
@@ -8,13 +8,23 @@ watch() {
   fi
 }
 
-# Dev fucntion : shortcut for ssks yarn etc.
+# Dev function : shortcut for ssks yarn etc.
 dev() {
   if [ -z "$1" ]
   then
     ssks yarn dev
   else
     ssks yarn workspace "$1" dev
+  fi
+}
+
+# Build function : shortcut for ssks yarn etc.
+build() {
+  if [ -z "$1" ]
+  then
+    ssks yarn build
+  else
+    ssks yarn workspace "$1" build
   fi
 }
 
