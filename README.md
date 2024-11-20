@@ -2,16 +2,27 @@
 
 My personal configuration files for vim, tmux etc.
 
+## Bash
+add the following lines add the end of your .bashrc file
+```
+if [ -f ~/dotfiles/bash/.bashrc-custom]; then
+  . ~/dotfiles/bash/.bashrc-custom
+fi
+``` 
 
-## Add symlinks
+## Alacritty 
+From the home directory
+```
+ln -s ~/dotfiles/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
+```
 
-### Tmux
+## Tmux
 From the home directory
 ```
 ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ```
 
-### Vim
+## Vim
 From the home directory
 ```
 ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
@@ -23,7 +34,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-### Neovim
+## Neovim
 From the home directory
 ```
 ln -s ~/dotfiles/nvim/init.vim ~/.config/nvim/.init.vim
