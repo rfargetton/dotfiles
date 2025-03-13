@@ -28,6 +28,10 @@ build() {
   fi
 }
 
+cursor() {
+  /home/romaric/Bureau/cursor-0.43.6x86_64.AppImage "$@"
+}
+
 # Home goes back to home and clear
 alias home="cd && clear" 
 
