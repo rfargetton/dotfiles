@@ -28,9 +28,10 @@ build() {
   fi
 }
 
-cursor() {
-  /home/romaric/Bureau/cursor-0.43.6x86_64.AppImage "$@"
-}
+# Remove in favor of offcial cursor cli
+# cursor() {
+#   /home/romaric/Bureau/cursor-0.43.6x86_64.AppImage "$@"
+# }
 
 # Home goes back to home and clear
 alias home="cd && clear" 
